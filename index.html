@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Stock Predictor 3000</title>
+    <!-- Futuristic Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="glitch" data-text="AI TREND ORACLE">AI TREND ORACLE</h1>
+            <p class="subtitle">NEURAL NETWORK PREDICTIONS // V 2.0.4</p>
+        </header>
+
+        <!-- Search Bar -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="symbolInput" placeholder="TICKER (e.g. AAPL, NVDA)" autocomplete="off">
+                <button id="analyzeBtn">EXECUTE_AI()</button>
+            </div>
+            <p id="errorMsg" class="error-msg"></p>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div id="loader" class="loader-container hidden">
+            <div class="cyber-spinner"></div>
+            <p>INITIALIZING NEURAL LINK...</p>
+        </div>
+
+        <!-- Dashboard Results -->
+        <section id="dashboard" class="dashboard hidden">
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="cyber-card">
+                    <h3>TARGET ASSET</h3>
+                    <p id="resSymbol" class="highlight">--</p>
+                </div>
+                <div class="cyber-card">
+                    <h3>FORECAST VECTOR</h3>
+                    <p id="resTrend" class="highlight">--</p>
+                </div>
+                <div class="cyber-card">
+                    <h3>PROBABILITY MATRIX</h3>
+                    <div class="confidence-container">
+                        <p id="resConfidence" class="highlight">--</p>
+                        <div class="progress-bar">
+                            <div id="confidenceBar" class="progress-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="cyber-card chart-card">
+                <h3>PRICE TRAJECTORY LOG</h3>
+                <div class="chart-container">
+                    <canvas id="stockChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
